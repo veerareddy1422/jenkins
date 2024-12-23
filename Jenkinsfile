@@ -4,14 +4,6 @@ pipeline {
         DOCKER_IMAGE = "apache-app"
     }
     stages {
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    sh 'docker build -t ${DOCKER_IMAGE} .'
-                }
-            }
-        }
-
         stage('Deploy to Minikube') {
             steps {
                 script {
