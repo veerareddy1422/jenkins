@@ -29,7 +29,7 @@ pipeline {
                 script {
                     // Expose the Apache service and print the URL
                     echo "Exposing Apache service and getting the URL"
-                    sh 'minikube service apache-service --url'
+                    sh 'minikube service ecomm-service --url'
                 }
             }
         }
