@@ -17,8 +17,8 @@ pipeline {
 
                     // Apply the deployment and service YAML files
                     echo "Deploying to Minikube"
-                    sh 'kubectl apply -f k8s/apache-deployment.yaml'
-                    sh 'kubectl apply -f k8s/apache-service.yaml'
+                    sh 'kubectl apply -f apache.yaml'
+                   // sh 'kubectl apply -f k8s/apache-service.yaml'
                     sh 'kubectl get pods'
                 }
             }
